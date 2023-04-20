@@ -10,12 +10,13 @@ public class Produit implements Parcelable {
     private int ref_produit;
     private String nom_du_produit;
     private String code_categorie;
-    private String prix_unitaire;
+    private double prix_unitaire;
     private int unites_en_stock;
 
     // Constructeur avec parametres
-    public Produit(String nom_du_produit, String code_categorie,
-                   String prix_unitaire, int unites_en_stock) {
+    public Produit(int ref_produit, String nom_du_produit, String code_categorie,
+                   double prix_unitaire, int unites_en_stock) {
+        this.ref_produit = ref_produit;
         this.nom_du_produit = nom_du_produit;
         this.code_categorie = code_categorie;
         this.prix_unitaire = prix_unitaire;
@@ -55,11 +56,11 @@ public class Produit implements Parcelable {
         this.code_categorie = code_categorie;
     }
 
-    public String getPrix_unitaire() {
+    public Double getPrix_unitaire() {
         return prix_unitaire;
     }
 
-    public void setPrix_unitaire(String prix_unitaire) {
+    public void setPrix_unitaire(Double prix_unitaire) {
         this.prix_unitaire = prix_unitaire;
     }
 
@@ -76,7 +77,7 @@ public class Produit implements Parcelable {
         ref_produit = in.readInt();
         nom_du_produit = in.readString();
         code_categorie = in.readString();
-        prix_unitaire = in.readString();
+        prix_unitaire = in.readDouble();
         unites_en_stock = in.readInt();
     }
 
@@ -102,8 +103,12 @@ public class Produit implements Parcelable {
         parcel.writeInt(ref_produit);
         parcel.writeString(nom_du_produit);
         parcel.writeString(code_categorie);
-        parcel.writeString(prix_unitaire);
+        parcel.writeDouble(prix_unitaire);
         parcel.writeInt(unites_en_stock);
+    }
+
+    public String toString(){
+        return ref_produit +", "+ nom_du_produit + ", "+ code_categorie + ", $" + prix_unitaire  +", "+ unites_en_stock + " unites";
     }
 
 }
