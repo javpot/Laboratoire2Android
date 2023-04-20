@@ -22,6 +22,7 @@
         </activity>
 
         <activity android:name="com.example.laboratoire2android.CategorieActivity" />
+        <activity android:name="com.example.laboratoire2android.TotalActivity" />
     </application>
 
 </manifest>

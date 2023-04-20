@@ -64,8 +64,16 @@ for (Produit p : listeProduits){
     }
 
 
+
+
     public void DetourPageMain(View view) {
 
             finish();
+    }
+
+    public void totalPage(View view) {
+        Intent monInt = new Intent(this.getApplicationContext(),TotalActivity.class);
+        monInt.putParcelableArrayListExtra("listeProduits",listeProduits);
+        startActivity(monInt);
     }
 }

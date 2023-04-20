@@ -53,6 +53,13 @@ public class CategorieActivity extends AppCompatActivity {
         adapterP = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listeCorrespondante);
         this.listView.setAdapter(adapterP);
     }
+    public void TotalPage(View view) {
+
+        Intent monInt = new Intent(this.getApplicationContext(),TotalActivity.class);
+        monInt.putParcelableArrayListExtra("listeProduits",listeTransmise);
+startActivity(monInt);
+
+    }
 
     public void DetourPageMain(View view) {
 
