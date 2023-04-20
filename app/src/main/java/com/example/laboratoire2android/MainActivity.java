@@ -2,6 +2,7 @@ package com.example.laboratoire2android;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -54,6 +55,11 @@ for (Produit p : listeProduits){
                 android.R.layout.simple_spinner_item, listerString);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         listView.setAdapter(adapter);
+    }
 
+    public void CategoriePage(View view) {
+        Intent monInt = new Intent(this.getApplicationContext(),CategorieActivity.class);
+        monInt.putParcelableArrayListExtra("listeProduits",listeProduits);
+        startActivity(monInt);
     }
 }

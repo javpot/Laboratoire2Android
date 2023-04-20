@@ -46,7 +46,8 @@
         android:text="Categorie"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar"
         app:layout_constraintStart_toEndOf="@+id/buttonLister"
-        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        android:onClick="CategoriePage"/>
 
     <Button
         android:id="@+id/buttonTotal"
