@@ -62,4 +62,10 @@ for (Produit p : listeProduits){
         monInt.putParcelableArrayListExtra("listeProduits",listeProduits);
         startActivity(monInt);
     }
+
+
+    public void DetourPageMain(View view) {
+
+            finish();
+    }
 }
