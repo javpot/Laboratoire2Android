@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Spinner;
 
 import java.util.ArrayList;
 
@@ -23,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button boutonLister = findViewById(R.id.buttonLister);
-        listView = findViewById(R.id.listViewMain);
+        listView = findViewById(R.id.listView);
         listeProduits.add(new Produit(1,"Chal","Boissons",90.00,39));
         listeProduits.add(new Produit(2,"Chang","Boissons",95.00,17));
         listeProduits.add(new Produit(3,"Aniseed Syrup","Condiments",50.00,13));
