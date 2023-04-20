@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class CategorieActivity extends AppCompatActivity {
     ArrayList<Produit> listeTransmise= new ArrayList<>();
-    String[] categories = {"Action","Drame","Comique","Enfants"};
+    String[] categories = {"Boissons","Condiments","Produits secs", "Poissons et fruits de mer","Viandes"};
     Spinner spinner;
     ArrayAdapter<String> adapterC;
     ArrayAdapter<String> adapterP;
